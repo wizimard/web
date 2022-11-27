@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "model": "XC60",
+    "brand": "VOLVO",
+    "type": "Sedan",
+    "release_year": 2000,
+    "created_at": null,
+    "updated_at": null
+  },
+  {
+    "id": 2,
+    "model": "XC90",
+    "brand": "VOLVO",
+    "type": "Sedan",
+    "release_year": 2002,
+    "created_at": null,
+    "updated_at": null
+  },
+  {
+    "id": 3,
+    "model": "XC70",
+    "brand": "VOLVO",
+    "type": "Sedan",
+    "release_year": 2006,
+    "created_at": null,
+    "updated_at": null
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "id": 1,
+  "type": "veg",
+  "name": "double cheese margherita",
+  "model": "big",
+  "price": 1000,
+  "created_at": null,
+  "updated_at": null
+}

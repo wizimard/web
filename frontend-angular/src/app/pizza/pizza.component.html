@@ -1,0 +1,66 @@
+<form [formGroup]="pizzaForm" (ngSubmit)="onSubmit()">
+	<div class="input-group mb-3">
+		<div class="input-group-prepend">
+			<label class="input-group-text" for="type">Type</label>
+		</div>
+		<select class="custom-select" formControlName="type" id="type">
+			<option value="0" selected>Choose pizza type</option>
+			<option value="veg">Vegetarian</option>
+			<option value="non-veg">No Vegetarian</option>
+		</select>
+	</div>
+	<div class="mb-3">
+		<label for="name" class="form-label">Name</label>
+		<input type="text" class="form-control" formControlName="name"  id="name" placeholder="Pizza name">
+	</div>
+	<div class="input-group mb-3">
+		<div class="input-group-prepend">
+			<label class="input-group-text" for="model">Model</label>
+		</div>
+		<select class="custom-select" formControlName="model"  id="model">
+			<option value="0" selected>Choose pizza model</option>
+			<option value="little">Little</option>
+			<option value="middle">Middle</option>
+			<option value="big">Big</option>
+		</select>
+	</div>
+	<div class="mb-3">
+		<label for="price" class="form-label">Price</label>
+		<div class="input-group mb-3">	
+			<input type="number" class="form-control" formControlName="price" id="price">
+			<div class="input-group-append">
+				<span class="input-group-text">₽</span>
+			</div>
+		</div>	
+	</div>
+	<button type="submit" [disabled]="!pizzaForm.valid" class="btn btn-primary btn-form">SUBMIT</button>
+</form>
+<div *ngIf="!!pizzas.length; else elseBlock" class="container" style="padding-top: 20px;">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Type</th>
+            <th scope="col">Name</th>
+            <th scope="col">Model</th>
+            <th scope="col">Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let pizza of pizzas">
+            <th scope="row">{{ pizza.id }}</th>
+            <td>{{ pizza.type }}</td>
+            <td>{{ pizza.name }}</td>
+            <td>{{ pizza.model }}</td>
+            <td>{{ pizza.price }}</td>
+            <td style="display:flex;flex-wrap:wrap;gap:5px;">
+								<button type="button" class="btn btn-info" (click)="deletePizza(pizza.id)">Delete</button>
+								<button type="button" class="btn btn-info" (click)="updatePizza(pizza.id)">Update</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<ng-template #elseBlock>
+	<div style="padding-top:20px;text-align:center;">No pizza</div>
+</ng-template>

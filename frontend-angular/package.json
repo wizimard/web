@@ -1,0 +1,45 @@
+{
+  "name": "angular-8-registration-login-example",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cornflourblue/angular-8-registration-login-example.git"
+  },
+  "scripts": {
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@angular/cli": "^8.3.17",
+    "@angular/common": "^8.2.13",
+    "@angular/compiler": "^8.2.13",
+    "@angular/core": "^8.2.13",
+    "@angular/forms": "^8.2.13",
+    "@angular/platform-browser": "^8.2.13",
+    "@angular/platform-browser-dynamic": "^8.2.13",
+    "@angular/router": "^8.2.13",
+    "@swimlane/ngx-datatable": "^20.0.0",
+    "angular-6-social-login": "^1.1.1",
+    "angularx-social-login": "^2.3.1",
+    "core-js": "^3.3.6",
+    "ng-social": "^8.0.0",
+    "rxjs": "^6.5.3",
+    "zone.js": "^0.10.2"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.5",
+    "angular2-template-loader": "^0.6.2",
+    "css-loader": "^3.2.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "style-loader": "^1.0.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.6.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  }
+}
